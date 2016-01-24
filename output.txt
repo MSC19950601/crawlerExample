@@ -1,0 +1,4 @@
+<html><body><table><tr><td>http://baike.baidu.com/link?url=4Kenu6xDy7_LUY0Rpc_6fNxeF2_TnUwNPcl9ZOWJS7kcMeWq0vUB5aLIRT5G06IpCB3kOjjJNF29GDmfkgcr5q</td><td>c++</td><td>
+C++是在C语言的基础上开发的一种面向对象编程语言，应用广泛。C++支持多种编程范式 －－面向对象编程、泛型编程和过程化编程。最新正式标准C++于2014年8月18日公布。[1] 
+其编程领域众广，常用于系统开发，引擎开发等应用领域，是至今为止最受广大程序员受用的最强大编程语言之一,支持类：类、封装、重载等特性!
+</td></tr></table></body></html>
