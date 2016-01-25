@@ -23,7 +23,7 @@ class SpiderMain(object):
                 newUrls, newData = self.parser.parse(newUrl, urlCont)
                 self.urls.addNewUrls(newUrls)
                 self.output.collectData(newData)
-                if count == 1000:
+                if count == 10:
                     break
                 count = count + 1
             except:
@@ -32,6 +32,6 @@ class SpiderMain(object):
         self.output.outputUrl()
 
 if __name__ == '__main__':
-    rootUrl = "http://baike.baidu.com/view/2655336.htm"
+    rootUrl = "https://www.zhihu.com/question/37321029"
     objSpider = SpiderMain()
     objSpider.craw(rootUrl)

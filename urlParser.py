@@ -4,7 +4,7 @@ import urlparse
 class UrlPaser(object):
     def getNewUrls(self,newUrl,soup):
         newUrls = set()
-        links = soup.find_all('a', href = re.compile(r"[a-zA-z]+://[^s]*"))
+        links = soup.find_all('a', href=re.compile(r"/question/+[1-9]"))
         for link in links:
             getNewUrl = link['href']
             getNewFullUrl = urlparse.urljoin(newUrl,getNewUrl)
@@ -17,11 +17,11 @@ class UrlPaser(object):
 
         resData['url'] = newUrl
 
-        titleNode = soup.find('dd', class_="lemmaWgt-lemmaTitle-title").find("h1")
-        resData['title'] = titleNode.get_text()
+        #titleNode = soup.find('dd', class_="lemmaWgt-lemmaTitle-title").find("h1")
+        #resData['title'] = titleNode.get_text()
 
-        summaryNode = soup.find('div', class_="lemma-summary")
-        resData['summary'] = summaryNode.get_text()
+        #summaryNode = soup.find('div', class_="lemma-summary")
+        #resData['summary'] = summaryNode.get_text()
 
         return resData
 
@@ -30,7 +30,7 @@ class UrlPaser(object):
         if newUrl is None or urlCont is None:
             return
 
-        soup = BeautifulSoup(urlCont, 'html.parser', from_encoding = 'gbk')
+        soup = BeautifulSoup(urlCont, 'html.parser', from_encoding = 'utf-8')
         newUrls = self.getNewUrls(newUrl, soup)
         newData = self.getNewData(newUrl, soup)
         return newUrls,newData

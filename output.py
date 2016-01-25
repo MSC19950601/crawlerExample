@@ -17,9 +17,9 @@ class Output(object):
 
         for data in self.datas:
             fout.write("<tr>")
-            fout.write("<td>%s</td>" % data['url'].encode('gbk'))
-            fout.write("<td>%s</td>" % data['title'].encode('gbk'))
-            fout.write("<td>%s</td>" % data['summary'].encode('gbk'))
+            fout.write("<td>%s</td>" % data['url'].encode('utf-8'))
+            #fout.write("<td>%s</td>" % data['title'].encode('gbk'))
+            #fout.write("<td>%s</td>" % data['summary'].encode('gbk'))
             fout.write("</tr>")
 
         fout.write("</table>")
